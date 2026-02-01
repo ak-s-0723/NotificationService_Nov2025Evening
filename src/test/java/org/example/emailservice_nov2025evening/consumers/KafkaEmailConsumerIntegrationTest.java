@@ -11,6 +11,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Import;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.test.context.EmbeddedKafka;
+import org.springframework.test.context.ActiveProfiles;
 
 import javax.mail.Session;
 
@@ -21,11 +22,8 @@ import static org.mockito.Mockito.*;
 
 
 @SpringBootTest
-@EmbeddedKafka(
-        topics = "password_reset",
-        partitions = 1
-)
-@Import(KafkaTestProducerConfig.class)
+@ActiveProfiles("test")
+@EmbeddedKafka(topics = "password_reset", partitions = 1)
 class KafkaEmailConsumerIntegrationTest {
 
     @Autowired

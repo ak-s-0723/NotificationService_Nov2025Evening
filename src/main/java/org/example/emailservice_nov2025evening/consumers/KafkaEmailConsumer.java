@@ -21,7 +21,7 @@ public class KafkaEmailConsumer {
     ObjectMapper objectMapper;
 
     @Autowired
-    private EmailSender emailSender;
+    EmailSender emailSender;
 
     @KafkaListener(topics="password_reset", groupId = "emailService")
       public void sendEmail(String message) {
