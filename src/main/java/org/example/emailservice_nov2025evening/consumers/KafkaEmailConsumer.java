@@ -4,14 +4,11 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.emailservice_nov2025evening.dtos.EmailDto;
 import org.example.emailservice_nov2025evening.emailsender.EmailSender;
-import org.example.emailservice_nov2025evening.utils.EmailUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 import java.util.Properties;
 
-import javax.mail.Authenticator;
-import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 
 @Component

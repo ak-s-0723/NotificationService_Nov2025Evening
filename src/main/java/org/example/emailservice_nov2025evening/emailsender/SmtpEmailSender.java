@@ -7,6 +7,7 @@ import javax.mail.Session;
 
 @Component
 public class SmtpEmailSender implements EmailSender {
+
     @Override
     public void send(Session session, String to, String subject, String body) {
         EmailUtil.sendEmail(session, to, subject, body);

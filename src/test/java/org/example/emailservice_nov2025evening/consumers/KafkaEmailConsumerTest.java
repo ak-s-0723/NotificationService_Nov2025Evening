@@ -22,7 +22,7 @@ class KafkaEmailConsumerTest {
     }
 
     @Test
-    void shouldConsumeKafkaMessageAndSendEmail() throws Exception {
+    void shouldConsumeKafkaMessageAndSendEmail() {
         String message = """
             {
               "to": "user@example.com",

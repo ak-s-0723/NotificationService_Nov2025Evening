@@ -12,7 +12,7 @@ import static org.mockito.Mockito.*;
 class EmailUtilTest {
 
     @Test
-    void shouldSendEmailSuccessfully() throws Exception {
+    void shouldSendEmailSuccessfully() {
 
         // Arrange
         Properties props = new Properties();

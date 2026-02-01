@@ -1,20 +1,15 @@
 package org.example.emailservice_nov2025evening.consumers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.emailservice_nov2025evening.configs.KafkaTestProducerConfig;
 import org.example.emailservice_nov2025evening.dtos.EmailDto;
 import org.example.emailservice_nov2025evening.emailsender.EmailSender;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.annotation.Import;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.test.context.EmbeddedKafka;
 import org.springframework.test.context.ActiveProfiles;
-
-import javax.mail.Session;
-
 import java.util.concurrent.TimeUnit;
 
 import static org.awaitility.Awaitility.await;
